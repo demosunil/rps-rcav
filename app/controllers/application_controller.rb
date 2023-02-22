@@ -4,10 +4,11 @@ class ApplicationController < ActionController::Base
   # Add your actions below this line
   # ================================
 
-  def homepage
+  def Rules
     render({:template =>"game_templates/rules.html.erb"})
+    
     end
-
+    
   def play_rock
      @comp_move= ["rock","paper","scissors"].sample
      if @comp_move == "rock" 
@@ -51,6 +52,8 @@ class ApplicationController < ActionController::Base
           end 
        render({:template => "game_templates/user_scissors.html.erb" })
           end
+          def rules
+            render({:template => "game_templates/rules.html.erb" })
         end   
     
-    
+      end
